@@ -113,7 +113,7 @@ def prepare_data(raw_data, processed_data, batch_size, split_mode, bin_count=20,
         Normalize(mean=all_means, std=all_stds)
     ])
    
-    # Split Train-Val and instantiate datasets and dataloaders
+    # Split Train-Val-Test or Train-Val and instantiate datasets and dataloaders
     bin_numbers = pd.qcut(x=filtered_train_metadata['perc_kelp'], q=bin_count, labels=False, duplicates='drop')
     
     if split_mode == 'train_val_test':
