@@ -1,1 +1,1 @@
-# KelpSemanticSegmentation
+# Kelp Semantic Segmentation
