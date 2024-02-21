@@ -43,7 +43,7 @@ def main():
     train_loader, val_loader, test_loader, test_given_loader, all_means, all_stds = prepare_data(args.raw_data, args.processed_data, args.batch_size, args.split_mode)    
     print("Data preparation done")
     
-    # Model instantiation remains
+    # Model instantiation
     model = get_model(args.model, args.use_distance_maps, args.use_dems, args.use_ndvi)
     print("Model Instantiation done")
     
@@ -70,7 +70,7 @@ def main():
         scheduler = None
     print("Scheduler instantiation done")
 
-    # Adjust the train_model function call to include args.use_checkpoint
+    # Training
     model, time_epoch, train_loss_history, val_loss_history, train_iou_history, val_iou_history, best_epoch = train_model(
         model=model, 
         optimizer=optimizer,        
@@ -86,7 +86,7 @@ def main():
         use_ndvi=args.use_ndvi,
         use_checkpoint=args.use_checkpoint)
     
-    # Saving learning curves and making predictions remain unchanged
+    # Saving learning curves and making predictions
     save_learning_curves(train_loss_history, val_loss_history, train_iou_history, val_iou_history, best_epoch, args.outputs)
     
     if args.split_mode == 'train_val_test':
