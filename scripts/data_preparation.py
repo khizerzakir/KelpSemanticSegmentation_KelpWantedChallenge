@@ -126,7 +126,7 @@ def prepare_data(raw_data, processed_data, batch_size, split_mode, bin_count=20,
 
     elif split_mode == 'train_val':
         train_metadata, val_metadata = train_test_split(filtered_train_metadata, test_size=640, random_state=random_state, stratify=bin_numbers)
-        test_dataset = None
+        test_loader = None
    
     train_dataset = KelpDataset(metadata=train_metadata, data_path=train_satellite_np, distance_map_path=train_distance_maps_np, ndvi_path=train_ndvi_np, label_path=train_kelp_np, data_transforms=data_transforms, label_transforms=None)
     val_dataset = KelpDataset(metadata=val_metadata, data_path=train_satellite_np, distance_map_path=train_distance_maps_np, ndvi_path=train_ndvi_np, label_path=train_kelp_np, data_transforms=data_transforms, label_transforms=None)
