@@ -3,7 +3,7 @@ This code is supporting the paper titled: "Kelp Wanted: Segmenting Kelp Forests"
 
 
 ## Contributors
-* [Leila Maritim](https://chepkemoileila39.wixsite.com/leila-maritim)
-* [Candela Pelliza](https://candelasolpelliza.com/)
 * [María Rodríguez](https://mariarodriguezn.github.io/)
+* [Candela Pelliza](https://candelasolpelliza.com/)
+* [Leila Maritim](https://chepkemoileila39.wixsite.com/leila-maritim)
 * [Khizer Zakir](https://khizerzakir.com/)
